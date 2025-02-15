@@ -1,0 +1,2 @@
+agenda{}
+nombre=input
