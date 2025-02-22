@@ -1,14 +1,12 @@
 def multiplicar(a, b):
     resultado = 0
-    es_negativo = (a < 0) != (b < 0)  # El resultado será negativo si solo uno de los números es negativo
+    es_negativo = (a < 0) != (b < 0) 
 
-    a, b = abs(a), abs(b)  # Trabajar con valores absolutos
-
-    for _ in range(b):  # Sumar 'a', 'b' veces
+    a, b = abs(a), abs(b)  
+    for _ in range(b): 
         resultado += a
 
-    return -resultado if es_negativo else resultado  # Aplicar el signo correcto
-
+    return -resultado if es_negativo else resultado  
 # Ejemplo de uso
 num1 = int(input("Ingrese el primer número: "))
 num2 = int(input("Ingrese el segundo número: "))

@@ -1,3 +1,1 @@
-numeros=list()
-def agregar(numero : int) ->None:
-    numeros.append(numero)
+def factorial(n:int)-

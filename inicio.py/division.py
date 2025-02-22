@@ -3,16 +3,15 @@ def dividir(a, b):
         raise ValueError("No se puede dividir entre cero")
 
     resultado = 0
-    es_negativo = (a < 0) != (b < 0)  # El resultado será negativo si solo uno de los números es negativo
+    es_negativo = (a < 0) != (b < 0) 
 
-    a, b = abs(a), abs(b)  # Trabajar con valores absolutos
+    a, b = abs(a), abs(b)  
 
-    while a >= b:  # Restar b de a hasta que a sea menor que b
+    while a >= b:  
         a -= b
         resultado += 1
 
-    return -resultado if es_negativo else resultado  # Aplicar el signo correcto
-
+    return -resultado if es_negativo else resultado  
 # Ejemplo de uso
 num1 = int(input("Ingrese el dividendo: "))
 num2 = int(input("Ingrese el divisor: "))
