@@ -1,0 +1,33 @@
+class Empleado:
+    def __init__(self, nombre, salario, departamento):
+        self.nombre = nombre
+        self.salario = salario
+        self.departamento = departamento
+    
+    def trabajar(self):
+        return f"{self.nombre} trabaja en {self.departamento}."
+
+class Gerente(Empleado):
+    def __init__(self, nombre, salario, departamento, equipo=None):
+        super().__init__(nombre, salario, departamento)
+        self.equipo = equipo if equipo else []
+    
+    def trabajar(self):
+        return f"{self.nombre} supervisa a {len(self.equipo)} empleados."
+
+class Desarrollador(Empleado):
+    def __init__(self, nombre, salario, departamento, lenguaje):
+        super().__init__(nombre, salario, departamento)
+        self.lenguaje = lenguaje
+    
+    def trabajar(self):
+        return f"{self.nombre} programa en {self.lenguaje}."
+
+
+felipe = Desarrollador("felipe", 50000, "TI", "Python")
+andrea = Desarrollador("Andrea", 55000, "TI", "Java")
+carlos = Gerente("Carlos", 70000, "TI", [felipe, andrea])
+
+print(felipe.trabajar())  
+print(andrea.trabajar())  
+print(carlos.trabajar())  
